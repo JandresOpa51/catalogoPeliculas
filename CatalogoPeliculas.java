@@ -141,18 +141,15 @@ public class CatalogoPeliculas {
                         System.out.println("Pelicula no encontrada.");
                     }
                     break;
-
                 case 5:
                     System.out.print("Titulo que desea eliminar: ");
                     String eliminar = sc.nextLine();
                     pos = -1;
-
                     for (int i = 0; i < total; i++) {
                         if (titulos[i].equalsIgnoreCase(eliminar)) {
                             pos = i;
                         }
                     }
-
                     if (pos != -1) {
                         System.out.println("1. Si");
                         System.out.println("2. No");
@@ -178,7 +175,6 @@ public class CatalogoPeliculas {
                         System.out.println("Pelicula no encontrada.");
                     }
                     break;
-
                 case 6:
                     System.out.println("\nCATALOGO DE PELICULAS");
                     System.out.println("Lenguaje: Java");
@@ -187,19 +183,14 @@ public class CatalogoPeliculas {
                     System.out.println("Integrantes:");
                     System.out.println("- Johan Viloria");
                     System.out.println("- Alexander Lopez");
-
                     break;
-
                 case 7:
                     System.out.println("Haz salido del sistema.");
                     break;
-
                 default:
                     System.out.println("Opcion incorrecta.");
             }
-
         } while (opcion != 7);
-
         sc.close();
     }
-}
+} 
