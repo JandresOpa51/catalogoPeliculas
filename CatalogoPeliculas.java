@@ -135,3 +135,74 @@ public class CatalogoPeliculas {
                                 break;
                             default:
                                 System.out.println("Opcion incorrecta.");
+                                    }
+ 
+                        System.out.println("Proceso terminado.");
+                    } else {
+                        System.out.println("Pelicula no encontrada.");
+                    }
+                    break;
+ 
+                case 5:
+                    System.out.print("Titulo que desea eliminar: ");
+                    String eliminar = sc.nextLine();
+                    pos = -1;
+ 
+                    for (int i = 0; i < total; i++) {
+                        if (titulos[i].equalsIgnoreCase(eliminar)) {
+                            pos = i;
+                        }
+                    }
+ 
+                    if (pos != -1) {
+                        System.out.println("1. Si");
+                        System.out.println("2. No");
+                        System.out.print("Confirmar eliminacion: ");
+                        int confirmar = sc.nextInt();
+                        sc.nextLine();
+ 
+                        if (confirmar == 1) {
+                            for (int i = pos; i < total - 1; i++) {
+                                titulos[i] = titulos[i + 1];
+                                directores[i] = directores[i + 1];
+                                generos[i] = generos[i + 1];
+                                anios[i] = anios[i + 1];
+                                calificaciones[i] = calificaciones[i + 1];
+                            }
+ 
+                            total--;
+                            System.out.println("Pelicula eliminada.");
+                        } else {
+                            System.out.println("Operacion cancelada.");
+                        }
+                    } else {
+                        System.out.println("Pelicula no encontrada.");
+                    }
+                    break;
+ 
+                case 6:
+                    System.out.println("\nCATALOGO DE PELICULAS");
+                    System.out.println("Lenguaje: Java");
+                    System.out.println("Tipo: Programa de consola");
+                    System.out.println("Equipo: 1");
+                    System.out.println("Integrantes:");
+                    System.out.println("- Johan Viloria");
+                    System.out.println("- Alexander Lopez");
+ 
+                    break;
+ 
+                case 7:
+                    System.out.println("Haz salido del sistema.");
+                    break;
+ 
+                default:
+                    System.out.println("Opcion incorrecta.");
+            }
+ 
+        } while (opcion != 7);
+ 
+        sc.close();
+    }
+}
+ 
+tiene menú contextual
